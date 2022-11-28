@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+    rel="stylesheet"
+    href="animate.css"
+  />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTSHOP-DAFTAR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <a class="active animate__animated animate__zoomIn">
+        <center>
+            <img src="l2.png" width="300" height="300">
+        </center>
+      </a>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-50">
+            <div class="col-lg-4">
+
+                <form>
+                    <center>
+                        <div class="card-header animate__animated animate__bounce"><b>Daftar</b></div>
+                        <div class="card-body text-success "></div>
+                    </center>
+                    
+                    <div class="mb-2">
+                      <label for="username" class="form-label animate__animated animate__bounce">Username</label>
+                      <input type="text" class="form-control animate__animated animate__bounce" id="username" >
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label animate__animated animate__bounce">Password</label>
+                      <input type="password" class="form-control animate__animated animate__bounce" id="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confrimpassword" class="form-label animate__animated animate__bounce">Confirm Password</label>
+                        <input type="confrimpassword" class="form-control animate__animated animate__bounce" id="confrimpassword">
+                      </div>
+                    
+                    <center>
+                        <div class="d-grid gap-2">
+                            <button onclick="cekdaftar()" class="btn btn-dark animate__animated animate__bounce" type="button">Dartar</button>
+                          </div>
+                    </center>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cekdaftar() {
+            //deklarasi Variabel
+            let username = "www.r";
+            let password = "oohh";
+            let confrimpassword = "oohh";
+
+            //tangkap isi field username
+            let tangkapUsername = document.getElementById('username');
+
+            //ambil isi dari field username
+            let isiUsername=tangkapUsername.value;
+            //alert(isiUsername);
+
+            //tangkap isi field password
+            let tangkapPassword = document.getElementById('password');
+
+            //ambil isi dari field upassword
+            let isiPassword=tangkapPassword.value;
+            //alert(isiUsername);
+
+            //tangkap isi field password
+            let tangkapConfrimPassword = document.getElementById('confrimpassword');
+
+            //ambil isi dari field upassword
+            let isiConfrimPassword=tangkapConfrimPassword.value;
+            //alert(isiUsername);
+
+            //LOGIKA LOGIN
+            //Jika isian user sama dengan database
+            
+            //mencocokkan inputan dengan username & password
+            if ((isiUsername===username)&&(isiPassword===password)&&(isiConfrimPassword===confrimpassword)) {
+                document.location="Home.html"
+            } else {
+                alert ("Password tidak sesuai silahkan coba lagi")
+            }
+
+        }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous"></script>
+
+</body>
+</html>
